@@ -1,2 +1,2 @@
 # MG_Calc
- Ein Projekt für die Mediagrafik mit Lavarell.
+ Ein Projekt für die Mediagrafik mit Lavarel.
