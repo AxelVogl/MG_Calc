@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', '\App\Http\Controllers\HomeController@index');
+
+Route::post('/create', '\App\Http\Controllers\MessageController@create');
