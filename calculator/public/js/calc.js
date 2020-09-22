@@ -1,9 +1,15 @@
 $(".no").on('click', function() {
     var anzeige = document.getElementById("anzeige");
-    var currentScore = parseInt(document.getElementById("anzeige").value);
-    var numberClicked = parseInt(this.value);
+    var currentScore = document.getElementById("anzeige").value;
+    var numberClicked = this.value;
+    if(currentScore == "0") {
+        var actScore = parseInt(currentScore) + parseInt(numberClicked);
+    } else {
+        actScore = currentScore + numberClicked;
+    }
 
-    var actScore = currentScore + numberClicked;
+
+    
 
     anzeige.value = actScore;
 });
