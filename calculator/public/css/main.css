@@ -36,3 +36,12 @@ button {
     grid-gap: 20px;
     padding: 20px;
 }
+
+.recentCalc {
+    width: 200px;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: 62%;
+    font-style: italic;
+    font-size: 20px;
+}

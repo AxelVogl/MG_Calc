@@ -4,8 +4,8 @@
 
 @section('content')
     <div class="calculator card">
-        <input type="text" id="anzeige" class="calculator-screen z-depth-1" value="0"/>
-    
+        <form action="/create" method="post">
+        <input type="text" id="anzeige" class="calculator-screen z-depth-1" value="0" name="content"/>   
         <div class="tasten">
 
             <button type="button" class="btn op btn-info" value="+">+</button>
@@ -27,24 +27,25 @@
 
             <button type="button" class="punkt btn btn-secondary" value=".">.</button>
             <button type="button" class="ac btn btn-danger" value="all-clear">AC</button>
-            <button type="button" class="gleich btn btn-secondary" value="=">=</button>
+            <button type="submit" class="gleich btn btn-secondary" value="=">=</button>
         
         </div>
       </div>
-{{-- 
-    <form action="/create" method="post">
-        <input type="text" name="title" placeholder="Title">
-        <input type="text" name="content" placeholder="Content">
-        {{ csrf_field() }}
-        <button type="submit">Submit</button>
-    </form>
-    <br>
-    Recent calculation:
 
-    <ul>
-        @foreach ($messages as $message)
-    <li>{{ $message->title }} - {{ $message->content }} </li>
-        @endforeach
-    </ul> --}}
+
+        {{ csrf_field() }}
+    </form>
+    <div class="recentCalc">
+        <br>
+        Recent calculation:
+    
+        <ul>
+            @foreach ($messages as $message)
+        <li>{{ $message->content }} </li>
+            @endforeach
+        </ul> 
+
+    </div>
+   
 
 @endsection
